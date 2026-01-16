@@ -1,0 +1,10 @@
+# 环境变量
+.env
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 虚拟环境
+.venv/
+venv/
