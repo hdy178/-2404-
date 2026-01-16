@@ -8,27 +8,27 @@ from src.refactor_chain import run_rewrite, run_extract
 CASES = [
     {
         "mode": "rewrite",
-        "input": "你怎么这么慢？",
-        "legacy": "请问进度是否可以再快一些？",
-        "refactor": "请问是否可以加快一些进度？",
+        "input": "这次作业怎么这么难？我有点做不出来。",
+        "legacy": "这次作业有点难，我做不出来。",
+        "refactor": "这次作业难度较高，我在完成过程中遇到了一些困难。",
     },
     {
         "mode": "rewrite",
-        "input": "把这个马上改完。",
-        "legacy": "请尽快完成这项修改。",
-        "refactor": "请您尽快完成这项修改。",
+        "input": "老师，这个地方我真的不太懂。",
+        "legacy": "老师，这个地方我不懂。",
+        "refactor": "老师，这一部分的内容我理解得还不够清楚。",
     },
     {
         "mode": "extract",
-        "input": "我们需要准备 PPT，下周一汇报，目前进度一般。",
+        "input": "这次课程作业要求下周一提交代码和实验报告，目前代码基本完成，但报告还没开始写。",
         "legacy": {
             "summary": "...",
-            "action_items": ["准备 PPT", "下周一汇报"],
+            "action_items": ["提交代码", "提交实验报告"],
             "tone": "中性",
         },
         "refactor": {
-            "summary": "团队需要准备下周一汇报用的PPT，但当前进度一般。",
-            "action_items": ["准备PPT", "下周一汇报"],
+            "summary": "课程作业需要在下周一提交代码和实验报告，目前代码已基本完成，但实验报告尚未开始撰写。",
+            "action_items": ["完成实验报告", "下周一提交作业"],
             "tone": "中性",
         },
     },
