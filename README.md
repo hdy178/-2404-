@@ -28,13 +28,14 @@
 ├── src/
 │   ├── legacy_simple.py   # 原始 legacy 脚本（对照用）
 │   ├── refactor_chain.py  # LangChain 重构后的核心逻辑（Part 2 + Part 3）
+│   ├── demo.py
 │   └── cli.py             # 命令行入口
 ├── examples/
-│   ├── rewrite_example.sh
-│   ├── extract_legacy_example.sh
-│   └── info_extract_example.sh
+│   ├── extract.py
+│   ├── rewrite.py
+│   └── info_extract.py
 └── tests/
-    └── parity_report.md   # legacy vs refactor 行为对比说明
+    └── test_report.py   # legacy vs refactor 行为对比说明
 ```
 
 ## 三、环境准备
@@ -104,7 +105,7 @@ python examples/extract.py
 用于验证「重构不改变业务语义」
 ```
 
-### 3.严格结构化信息抽取（Part 3）
+### 3.严格结构化信息抽取
 
 ```bash
 python examples/info_extract.py
